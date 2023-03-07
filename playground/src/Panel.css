@@ -1,0 +1,73 @@
+.grid {
+    display: grid;
+    margin: 50px auto 0 auto;
+    width: 200px;
+    grid-template-columns: repeat(10, 20px);
+    grid-template-rows: repeat(10, 20px);
+ }
+
+.grid > .panel {
+    grid-column: var(--column);
+    grid-row: var(--row);
+}
+
+.grid > .row1 {
+    --row: 1;
+}
+
+.grid > .row2 {
+    --row: 2;
+}
+
+.grid > .row3 {
+    --row: 3;
+}
+
+.grid > .column1 {
+    --column: 1;
+}
+
+.grid > .column2 {
+    --column: 2;
+}
+
+.grid > .column3 {
+    --column: 3;
+}
+
+.grid > .column4 {
+    --column: 4;
+}
+
+.grid > .column5 {
+    --column: 5;
+}
+
+.grid > .column6 {
+    --column: 6;
+}
+
+.grid > .column7 {
+    --column: 7;
+}
+
+.grid > .column8 {
+    --column: 8;
+}
+
+.grid > .column9 {
+    --column: 9;
+}
+
+.grid > .column10 {
+    --column: 10;
+}
+
+.grid > .on {
+    background-color: red;
+}
+
+.grid > .off {
+    background-color: white;
+}
+
