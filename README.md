@@ -57,7 +57,7 @@ npm install
 VITE_API_BASE_URL=http://localhost:3000
 ```
 
-> 例: NestJS (Fastify) 最小スターターを `npm run dev` で起動している場合の既定ポート。
+> 例: Playground.NestJS (NestJS (Fastify) 最小スターター)を `npm run dev` で起動している場合の既定ポート。
 
 ### SCSS Modules の型宣言
 
@@ -84,7 +84,7 @@ npm run dev
 
 ## 使用方法
 
-1. **NestJS サーバー**（認証 API）を起動
+1. **Playground.NestJS (NestJS (Fastify) 最小スターター)**（認証 API）を起動
    - 例: `npm run dev`（Fastify, `http://localhost:3000`）
 2. **React 側**を `npm run dev` で起動
 3. ログインページで以下のデモアカウントを入力
@@ -118,7 +118,7 @@ npm run dev
 
 ## 注意事項
 
-- NestJS サーバーが起動していない場合、ログイン API は失敗します。
+- Playground.NestJS (NestJS (Fastify) 最小スターター)が起動していない場合、ログイン API は失敗します。
 - このデモはシンプルな構成です。実運用ではトークンのリフレッシュ、失効、CSRF 対策等の強化を行ってください。
 
 ---
