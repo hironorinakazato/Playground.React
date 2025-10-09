@@ -36,6 +36,14 @@ src/
   store.ts                # Redux Store 設定
   App.tsx                 # ルーティング
   main.tsx                # エントリーポイント
+test/
+  components/
+    Dashboard.test.tsx    # src/pages/Dashboard.tsx のテスト
+    Login.test.tsx        # src/pages/Login.tsx のテスト
+  hooks/
+    useDashboard.test.ts  # src/pages/useDashboard.ts のテスト
+    useLogin.test.ts      # src/pages/useLogin.ts のテスト
+  setupTests.ts           # グローバルセットアップ (polyfills, CSS module mock)
 public/
 package.json
 README.md
@@ -105,14 +113,47 @@ npm run dev
 
 ---
 
+## テスト（Jest）
+
+Jest と React Testing Library によるユニット/コンポーネントテストを追加しました。テストは `test/` 配下に配置されています。
+
+### すべてのテストを実行
+```bash
+npm test
+```
+
+### 特定のファイル/テストを実行
+```bash
+npx jest test/components/Login.test.tsx
+# あるいは名前で絞り込み
+npx jest -t "Login component"
+```
+
+### カバレッジを出力
+```bash
+npm run test:coverage
+```
+- カバレッジは `coverage/` ディレクトリに出力されます。
+
+### テスト構成メモ
+- Jest 設定: `jest.config.cjs`
+- テスト用 TypeScript 設定: `tsconfig.jest.json`（JSX と型の読み込み設定を含む）
+- グローバルセットアップ: `test/setupTests.ts`
+  - `TextEncoder` / `TextDecoder` の polyfill を適用
+  - CSS Modules（`*.module.scss`）をモック（`identity-obj-proxy`）
+
+---
+
 ## スクリプト
 
-| コマンド         | 説明                          |
-|------------------|-------------------------------|
-| `npm run dev`    | 開発サーバ起動 (Vite)         |
-| `npm run build`  | 本番ビルド                    |
-| `npm run preview`| ビルド成果物のローカル確認    |
-| `npm run lint`   | ESLint によるコード検証       |
+| コマンド                | 説明                          |
+|-------------------------|-------------------------------|
+| `npm run dev`           | 開発サーバ起動 (Vite)         |
+| `npm run build`         | 本番ビルド                    |
+| `npm run preview`       | ビルド成果物のローカル確認    |
+| `npm run lint`          | ESLint によるコード検証       |
+| `npm test`              | Jest によるテスト実行         |
+| `npm run test:coverage` | カバレッジレポート生成        |
 
 ---
 

@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "allowJs": true,
+    "isolatedModules": false,
+    "noEmit": true,
+    "types": ["jest", "node", "@testing-library/jest-dom"],
+    "forceConsistentCasingInFileNames": true,
+    "strict": true
+  },
+  "include": ["src", "test", "src/types/cssmodule.d.ts"]
+}
